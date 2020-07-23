@@ -1,16 +1,23 @@
 import React from "react";
-import "./App.css";
+
+function GrandSon() {
+  return <h6>孫です</h6>;
+}
+
+function Child() {
+  return (
+    <dvi>
+      <h4>子供です</h4>
+      <GrandSon />
+    </dvi>
+  );
+}
 
 function App() {
-  function buttonFunc(text) {
-    alert(text);
-  }
-
   return (
     <div>
-      <h1>React</h1>
-      <p>gitの２回目のコミット</p>
-      <button onClick={() => buttonFunc("アラート")}>ボタン</button>
+      <h1>親です</h1>
+      <Child />
     </div>
   );
 }
